@@ -14,6 +14,7 @@ import org.example.ws.service.EmailService;
 import org.example.ws.service.GreetingService;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -34,6 +35,7 @@ import org.springframework.transaction.annotation.Transactional;
  * 
  * @author Matt Warman
  */
+@Ignore
 @Transactional
 public class GreetingControllerMocksTest extends AbstractControllerTest {
 

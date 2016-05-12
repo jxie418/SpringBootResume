@@ -3,6 +3,7 @@ package org.example.ws;
 import java.io.IOException;
 
 import org.example.ws.web.api.BaseController;
+import org.junit.Ignore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -22,6 +23,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * 
  * @author Matt Warman
  */
+@Ignore
 @WebAppConfiguration
 public abstract class AbstractControllerTest extends AbstractTest {
 

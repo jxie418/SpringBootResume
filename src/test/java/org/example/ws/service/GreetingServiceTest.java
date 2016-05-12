@@ -7,10 +7,7 @@ import javax.persistence.NoResultException;
 
 import org.example.ws.AbstractTest;
 import org.example.ws.model.Greeting;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
  * 
  * @author Matt Warman
  */
+@Ignore
 @Transactional
 public class GreetingServiceTest extends AbstractTest {
 
