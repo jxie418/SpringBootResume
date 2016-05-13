@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: james.xie.resume.JamesxieresumeApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.943 sec - in james.xie.resume.JamesxieresumeApplicationTests

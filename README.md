@@ -28,14 +28,14 @@ Use ```mvn clean install``` to build the project, which will create a jar ready 
 
 The application can be accessed locally at;
 ```
-http://localhost:8301
+http://localhost:8300
 ```
 
 ### Documentation
 
 - We are using Swagger to automatically generate documentation on our APIs. You can find them here;
 ```
-http://localhost:8301/index.html
+http://localhost:8300/index.html
 ```
 
 ### Spring profiles
