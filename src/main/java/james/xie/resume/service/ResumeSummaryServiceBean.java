@@ -19,13 +19,13 @@ import java.util.Collection;
  */
 @Service(value="resumeSummaryService")
 @CacheConfig(cacheNames = "summaries")
-public class ResumeSummaryServiceBean implements ResumeSummaryService {
+public class ResumeSummaryServiceBean{
 
     @Autowired
     private MongoTemplate mongoTemplate;
 
     @Cacheable
-    @Override
+    //@Override
     public Collection<ResumeSummary> findAll() {
         return mongoTemplate.findAll(ResumeSummary.class);
     }
@@ -40,7 +40,7 @@ public class ResumeSummaryServiceBean implements ResumeSummaryService {
     @CachePut(
             value = "summary",
             key ="#summary.id")
-    @Override
+    //@Override
     public void create(ResumeSummary summary) {
         mongoTemplate.save(summary,"Summary");
     }
@@ -49,7 +49,7 @@ public class ResumeSummaryServiceBean implements ResumeSummaryService {
             value = "summary",
             key = "#resumeSummary._id"
     )
-    @Override
+    //@Override
     public ResumeSummary update(ResumeSummary summary) {
        ResumeSummary resumeSummary = findOne(summary.get_id());
         if (resumeSummary == null) {
@@ -64,7 +64,7 @@ public class ResumeSummaryServiceBean implements ResumeSummaryService {
 
    @CacheEvict(value ="summary",
         key = "#id")
-   @Override
+   //@Override
     public void delete(String id) {
         ResumeSummary resumeSummary = findOne(id);
         mongoTemplate.remove(resumeSummary);
@@ -73,7 +73,7 @@ public class ResumeSummaryServiceBean implements ResumeSummaryService {
     @CacheEvict(
             value = "summary",
             allEntries = true)
-    @Override
+    //@Override
     public void evictCache() {
 
     }
