@@ -9,7 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import javax.persistence.NoResultException;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
@@ -39,9 +38,9 @@ public class BaseController {
      * @return A ResponseEntity containing the Exception Attributes in the body
      *         and HTTP status code 404.
      */
-    @ExceptionHandler(NoResultException.class)
+    @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, Object>> handleNoResultException(
-            NoResultException noResultException, HttpServletRequest request) {
+            Exception noResultException, HttpServletRequest request) {
 
         logger.info("> handleNoResultException");
 
