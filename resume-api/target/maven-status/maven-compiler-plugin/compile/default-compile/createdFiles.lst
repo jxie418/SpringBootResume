@@ -1,0 +1,10 @@
+james/xie/resume/api/service/impl/ResumeDataServiceImpl.class
+james/xie/resume/api/configuration/ApplicationConfiguration.class
+james/xie/resume/api/controller/GlobalExceptionController.class
+james/xie/resume/api/component/colour/ColourInfo.class
+james/xie/resume/api/DgUsApplication.class
+james/xie/resume/api/component/colour/impl/ColourMapperImpl.class
+james/xie/resume/api/component/colour/ColourMapper.class
+james/xie/resume/api/configuration/SwaggerConfiguration.class
+james/xie/resume/api/service/ResumeDataService.class
+james/xie/resume/api/controller/ResumeDataController.class

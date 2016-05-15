@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>GlobalExceptionController.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">resume-api</a> &gt; <a href="index.source.html" class="el_package">james.xie.resume.api.controller</a> &gt; <span class="el_source">GlobalExceptionController.java</span></div><h1>GlobalExceptionController.java</h1><pre class="source lang-java linenums">package james.xie.resume.api.controller;
+
+import james.xie.resume.webservice.exception.ResumeDataException;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+<span class="nc" id="L8">@Slf4j</span>
+@ControllerAdvice
+<span class="nc" id="L10">public class GlobalExceptionController {</span>
+
+    @ExceptionHandler(Exception.class)
+    public void handleGenericException(Exception ex) throws Exception {
+<span class="nc" id="L14">        log.error(ex.getMessage());</span>
+<span class="nc" id="L15">        throw ex;</span>
+    }
+
+    @ExceptionHandler(ResumeDataException.class)
+    public void handleAudaVINException(ResumeDataException resumeDataException) throws Exception {
+<span class="nc" id="L20">        log.error(resumeDataException.getMessage(), resumeDataException);</span>
+<span class="nc" id="L21">        throw resumeDataException;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
