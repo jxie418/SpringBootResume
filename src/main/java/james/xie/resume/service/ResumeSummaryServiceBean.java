@@ -56,10 +56,9 @@ public class ResumeSummaryServiceBean{
             return null;
         }
         Query query = new Query(Criteria.where("_id").is(summary.get_id()));
-        mongoTemplate.updateFirst(query,
-                Update.update("summaryInfo",summary.getSummaryInfo()),ResumeSummary.class);
+        if (summary.getSummaryInfo() != null)
+            mongoTemplate.updateFirst(query, Update.update("summaryInfo",summary.getSummaryInfo()),ResumeSummary.class);
         return mongoTemplate.findOne(query,ResumeSummary.class);
-
     }
 
    @CacheEvict(value ="summary",
